@@ -1,0 +1,23 @@
+#board {
+    margin: 0 auto;
+    text-align: center;
+
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.square {
+    cursor: pointer;
+    padding: 70px;
+    background-color: #ccc;
+    transition: scale 300ms;
+
+    @media (prefers-color-scheme: light) {
+        background-color: darken(#ccc, 50);
+    }
+
+    &:hover {
+        scale: 1.01;
+    }
+}
