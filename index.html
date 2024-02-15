@@ -10,20 +10,23 @@
     <h1 class="page-title">Tic Tac Toe</h1>
 
     <div class="players">
-      <div>Player 1: <span class="symbol"></span></div>
-      <div>Player 2: <span class="symbol"></span></div>
+      <div>Player 1: X</div>
+      <button class="reset-button" id="reset-button">Reset</button>
+      <div>Player 2: O</div>
     </div>
 
-    <div class="board">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
+    <div id="info-text" class="info">X plays first</div>
+
+    <div id="board" class="board">
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
+      <div data-square class="square"></div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

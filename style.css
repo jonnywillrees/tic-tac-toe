@@ -47,6 +47,7 @@ body {
   place-content: center;
   min-width: 320px;
   min-height: 100vh;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {
@@ -65,13 +66,11 @@ body {
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
-  text-align: center;
   margin-bottom: 0.5em;
 }
 
 .board {
   margin: 0 auto;
-  text-align: center;
   display: grid;
   gap: 4px;
   grid-template-columns: repeat(3, 1fr);
@@ -83,9 +82,17 @@ body {
   margin-bottom: 1rem;
 }
 
+.reset-button {
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+}
+
+.info {
+  margin-bottom: 1rem;
+}
+
 .square {
   position: relative;
-  cursor: pointer;
   padding: 70px;
   background-color: #ccc;
   transition: scale 300ms;
@@ -95,7 +102,10 @@ body {
     background-color: #4d4d4d;
   }
 }
-.square:hover {
+.square:not(.x):not(.o) {
+  cursor: pointer;
+}
+.square:not(.x):not(.o):hover {
   scale: 1.06;
 }
 
@@ -127,4 +137,14 @@ body {
   height: 80%;
   border: 6px solid black;
   border-radius: 50%;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay::after {
+  inset: 0;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.55);
 }/*# sourceMappingURL=style.css.map */

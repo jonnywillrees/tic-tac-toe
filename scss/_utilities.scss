@@ -1,0 +1,10 @@
+.overlay {
+    position: relative;
+
+    &::after {
+        inset: 0;
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.55);
+    }
+}
